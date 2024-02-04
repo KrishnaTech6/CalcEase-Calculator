@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         if(view is Button){
             var text = view.text.toString()
             when(text){
-                "X" -> text = "*"
+//                "X" -> text = "*"
                 "( )" ->{
                     if (hasOpenBracket){
                         text = ")"
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun solvedEquationDisplayed(hasPreview:Boolean =true){
         try {
-            val result = evaluateExpression(calculationText)
+            val result = evaluateExpression(calculationText.replace("×","*"))
             if (hasPreview){
                 binding.tvShowCalculation.textSize =44f
                 binding.tvDisplayAnswer.textSize = 30F
