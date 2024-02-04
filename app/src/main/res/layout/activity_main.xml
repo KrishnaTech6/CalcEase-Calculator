@@ -15,6 +15,7 @@
         android:gravity="end|center_vertical"
         android:padding="@dimen/extra_padding"
         tools:text="2134"
+        android:textColor="@color/whiteNew"
         android:textSize="@dimen/text_size_calc_24"
         app:layout_constraintBottom_toTopOf="@+id/tv_display_answer"
         tools:layout_editor_absoluteX="8dp" />
@@ -28,6 +29,7 @@
         android:gravity="end|center_vertical"
         android:padding="@dimen/extra_padding"
         tools:text="2134"
+        android:textColor="@color/whiteNew"
         android:textSize="@dimen/text_size_calc_36sp"
         app:layout_constraintBottom_toTopOf="@+id/LL"
         tools:layout_editor_absoluteX="8dp" />
@@ -55,6 +57,7 @@
                 android:layout_margin="@dimen/standard_margin"
                 android:padding="@dimen/padding_btn"
                 android:text="@string/c"
+                android:onClick="clearField"
                 android:textSize="28sp" />
 
             <Button
@@ -64,6 +67,7 @@
                 android:layout_margin="@dimen/standard_margin"
                 android:padding="@dimen/padding_btn"
                 android:text="@string/percent"
+                android:onClick="getData"
                 android:textSize="28sp" />
 
             <Button
@@ -73,6 +77,7 @@
                 android:layout_margin="@dimen/standard_margin"
                 android:padding="@dimen/padding_btn"
                 android:text="@string/divide"
+                android:onClick="getData"
                 android:textSize="28sp" />
 
             <LinearLayout
@@ -84,6 +89,7 @@
                     android:id="@+id/btn_delete"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:onClick="deleteSingle"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="6dp"
                     android:background="@drawable/delete_text_svgrepo_com" />
@@ -101,9 +107,10 @@
                         android:layout_width="72dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/standard_margin"
-                        android:backgroundTint="#FAFAFF"
+                        android:backgroundTint="@color/whiteNew"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/_7"
+                        android:onClick="getData"
                         android:textColor="@color/black"
                         android:textSize="28sp" />
 
@@ -112,9 +119,10 @@
                         android:layout_width="72dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/standard_margin"
-                        android:backgroundTint="#FAFAFF"
+                        android:backgroundTint="@color/whiteNew"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/_8"
+                        android:onClick="getData"
                         android:textColor="@color/black"
                         android:textSize="28sp" />
 
@@ -123,9 +131,10 @@
                         android:layout_width="72dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/standard_margin"
-                        android:backgroundTint="#FAFAFF"
+                        android:backgroundTint="@color/whiteNew"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/_9"
+                        android:onClick="getData"
                         android:textColor="@color/black"
                         android:textSize="28sp" />
 
@@ -136,6 +145,7 @@
                         android:layout_margin="@dimen/standard_margin"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/x"
+                        android:onClick="getData"
                         android:textSize="28sp" />
 
 
@@ -151,9 +161,10 @@
                         android:layout_width="72dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/standard_margin"
-                        android:backgroundTint="#FAFAFF"
+                        android:backgroundTint="@color/whiteNew"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/_4"
+                        android:onClick="getData"
                         android:textColor="@color/black"
                         android:textSize="28sp" />
 
@@ -162,9 +173,10 @@
                         android:layout_width="72dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/standard_margin"
-                        android:backgroundTint="#FAFAFF"
+                        android:backgroundTint="@color/whiteNew"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/_5"
+                        android:onClick="getData"
                         android:textColor="@color/black"
                         android:textSize="28sp" />
 
@@ -173,9 +185,10 @@
                         android:layout_width="72dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/standard_margin"
-                        android:backgroundTint="#FAFAFF"
+                        android:backgroundTint="@color/whiteNew"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/_6"
+                        android:onClick="getData"
                         android:textColor="@color/black"
                         android:textSize="28sp" />
 
@@ -186,6 +199,7 @@
                         android:layout_margin="@dimen/standard_margin"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/minus"
+                        android:onClick="getData"
                         android:textSize="28sp" />
 
 
@@ -200,9 +214,10 @@
                         android:layout_width="72dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/standard_margin"
-                        android:backgroundTint="#FAFAFF"
+                        android:backgroundTint="@color/whiteNew"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/_1"
+                        android:onClick="getData"
                         android:textColor="@color/black"
                         android:textSize="28sp" />
 
@@ -211,9 +226,10 @@
                         android:layout_width="72dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/standard_margin"
-                        android:backgroundTint="#FAFAFF"
+                        android:backgroundTint="@color/whiteNew"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/_2"
+                        android:onClick="getData"
                         android:textColor="@color/black"
                         android:textSize="28sp" />
 
@@ -222,9 +238,10 @@
                         android:layout_width="72dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/standard_margin"
-                        android:backgroundTint="#FAFAFF"
+                        android:backgroundTint="@color/whiteNew"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/_3"
+                        android:onClick="getData"
                         android:textColor="@color/black"
                         android:textSize="28sp" />
 
@@ -235,6 +252,7 @@
                         android:layout_margin="@dimen/standard_margin"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/plus"
+                        android:onClick="getData"
                         android:textSize="28sp" />
 
 
@@ -251,6 +269,7 @@
                         android:layout_margin="@dimen/standard_margin"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/dot"
+                        android:onClick="getData"
                         android:textSize="28sp" />
 
                     <Button
@@ -258,9 +277,10 @@
                         android:layout_width="72dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/standard_margin"
-                        android:backgroundTint="#FAFAFF"
+                        android:backgroundTint="@color/whiteNew"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/_0"
+                        android:onClick="getData"
                         android:textColor="@color/black"
                         android:textSize="28sp" />
 
@@ -271,6 +291,7 @@
                         android:layout_margin="@dimen/standard_margin"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/brackets"
+                        android:onClick="getData"
                         android:textSize="28sp" />
 
                     <Button
@@ -280,6 +301,7 @@
                         android:layout_margin="@dimen/standard_margin"
                         android:padding="@dimen/padding_btn"
                         android:text="@string/equal"
+                        android:onClick="solveEquation"
                         android:textSize="28sp" />
         </LinearLayout>
     </LinearLayout>
