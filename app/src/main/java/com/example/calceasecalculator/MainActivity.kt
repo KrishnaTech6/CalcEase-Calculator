@@ -18,14 +18,6 @@ class MainActivity : AppCompatActivity() {
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        binding.tvShowCalculation.text = calculationText
-
-
-
-
-
-
     }
 
     fun getData(view: View) {
@@ -44,6 +36,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             calculationText += text
+            solvedEquationDisplayed()
             binding.tvShowCalculation.text = calculationText
         }
     }
@@ -51,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         if (view is Button){
             //Delete calculation text
             calculationText = ""
+            hasOpenBracket= false
+            solvedEquationDisplayed()
             binding.tvShowCalculation.text = calculationText
             binding.tvDisplayAnswer.text = calculationText
         }
@@ -60,25 +55,56 @@ class MainActivity : AppCompatActivity() {
         if (view is Button){
             if (calculationText.isNotEmpty())
                 calculationText = calculationText.removeRange(calculationText.length-1, calculationText.length)
+            else hasOpenBracket=false
+
+            //For determining if we have to apply open bracket or closed bracket
+            var openBracketCount = 0
+            var closeBracketCount = 0
+            for (char in calculationText){
+                when(char){
+                    '(' -> openBracketCount++
+                    ')' -> closeBracketCount++
+                }
+            }
+            hasOpenBracket =
+                openBracketCount > closeBracketCount //will return true of false , so that next time clicking on brackets button right bracket is shown
+            solvedEquationDisplayed()
             binding.tvShowCalculation.text = calculationText
         }
     }
 
     fun solveEquation(view: View) {
         if (view is Button ){
-            try {
-                val result = evaluateExpression(calculationText)
-                binding.tvDisplayAnswer.text = result.toString()
-            }catch (e:Exception){
-                binding.tvDisplayAnswer.text = "Error"
-                Toast.makeText(this ,"$e", Toast.LENGTH_SHORT).show()
-            }
-
+            solvedEquationDisplayed(false)
         }
     }
 
     private fun evaluateExpression(expression: String): Double {
         return ExpressionBuilder(expression).build().evaluate()
+    }
+    private fun solvedEquationDisplayed(hasPreview:Boolean =true){
+        try {
+            val result = evaluateExpression(calculationText)
+            if (hasPreview){
+                binding.tvShowCalculation.textSize =44f
+                binding.tvDisplayAnswer.textSize = 30F
+            }else{
+                binding.tvShowCalculation.textSize =30f
+                binding.tvDisplayAnswer.textSize = 44F
+            }
+            binding.tvDisplayAnswer.text = result.toString()
+
+        }catch (e:Exception){
+            if (hasPreview){
+                binding.tvShowCalculation.textSize =44f
+                binding.tvDisplayAnswer.textSize = 30F
+                binding.tvDisplayAnswer.text = ""
+            }else{
+                binding.tvShowCalculation.textSize =44f
+                binding.tvDisplayAnswer.textSize = 30F
+                binding.tvDisplayAnswer.text = "Error"
+            }
+        }
     }
 
 }
