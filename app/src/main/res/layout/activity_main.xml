@@ -18,7 +18,7 @@
         android:textIsSelectable="true"
         android:paddingStart="24dp"
         tools:text="2134"
-        android:maxLines="3"
+        android:maxLines="2"
         android:textColor="@color/textColor"
         android:textSize="@dimen/text_size_calc_24"
         app:layout_constraintBottom_toTopOf="@+id/tv_display_answer"
