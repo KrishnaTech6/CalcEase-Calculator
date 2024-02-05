@@ -115,8 +115,8 @@ class MainActivity : AppCompatActivity() {
                 binding.tvDisplayAnswer.setTextColor(ContextCompat.getColor(this, R.color.previewTextColor))
                 binding.tvShowCalculation.setTextColor(ContextCompat.getColor(this, R.color.textColor))
             }else{
-                binding.tvShowCalculation.textSize =44f
-                binding.tvDisplayAnswer.textSize = 30F
+                binding.tvShowCalculation.textSize =30f
+                binding.tvDisplayAnswer.textSize = 44F
                 binding.tvDisplayAnswer.text = "Error"
                 binding.tvDisplayAnswer.setTextColor(ContextCompat.getColor(this, R.color.textColor))
                 binding.tvShowCalculation.setTextColor(ContextCompat.getColor(this, R.color.previewTextColor))
