@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         if(view is Button){
             var text = view.text.toString()
             when(text){
-//                "X" -> text = "*"
                 "( )" ->{
                     if (hasOpenBracket){
                         text = ")"
