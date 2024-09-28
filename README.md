@@ -12,4 +12,4 @@ Welcome to my learning project! This app is designed to enhance my knowledge of 
 - **Material Design Components**: To create a modern and cohesive UI that enhances user experience.
 - **Lottie for Android**: High-quality animations that are lightweight and easy to implement.
 - **Kotlin**: Primary language used for app development.
-- **Jetpack Compose**: UI toolkit for building the app's interface declaratively (if used, otherwise mention XML layout).
+- ** XML layout : Xml for designing ui 
